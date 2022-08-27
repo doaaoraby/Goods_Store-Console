@@ -13,25 +13,6 @@ namespace Goods_store.Services
 {
     internal class GenerateFiles
     {
-        //public List<FileStream> gnrateFiles(List <FirstBalance>list  )
-        //{
-        //    List<FileStream> files = new List<FileStream>();
-        //    string path = Directory.GetCurrentDirectory();
-        //    var outputFolder = Directory.CreateDirectory(path + @"\output\");
-        //    foreach ( FirstBalance fb in list)
-        //    { 
-        //        var name = fb.GoodId;
-        //        FileStream fs = File.Create(path + @"\output\"+name.ToString()+".csv");
-        //        //var firstBalance.goodId = new StringBuilder();
-        //        files.Add(fs);
-        //    }
-        //    return files;
-        //}
-        //public List<string> getFilesNames()
-        //{
-
-        //    return
-        //}
         public void writeInFiles(List<Goods> lines)
         {
 
@@ -60,7 +41,6 @@ namespace Goods_store.Services
                     if (lines[i].GoodId == lines[i-1].GoodId)
                     {
                         csv.AppendLine(lines[i].GoodId + ";" + lines[i].TransactionId + ";" + lines[i].TransactionDate + ";" + lines[i].Amount + ";" + lines[i].Direction + ";" + lines[i].Comments);
-                       // csv.Append(Environment.NewLine);
                     }
                     else
                     {
